@@ -1,0 +1,51 @@
+<br> <br> <br> <br> <br> <br> <br> <br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 mx-auto my-5" *ngFor="let item of dataArry2">
+      <mat-card class="example-card">
+        <mat-card-header>
+
+          <mat-card-title style="margin-left:40px ;">Nom_Client<h6 class="b" >{{item.name}}</h6></mat-card-title>
+          <mat-card-title style="margin-left:40px ;">Description<h6 class="b" >{{item.namepiece}}</h6></mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="assets/img/clients/n11.png" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+
+           <h6  style="color: #2d0d47;"><h6 style="margin-left:40px ;">Contrat_Client</h6>{{item.date}}</h6>  <span></span>
+
+        </mat-card-content>
+        <mat-card-actions>
+          <button  type="button" class="btn" style="color: #000000 ;margin-left:20px ;" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="nasr(item.id)">
+            Modifier
+          </button>
+          <button type="button" class="btn btn-outline-danger" style="margin-left:10px ;" (click)="delete(item.id)" >
+            Supprimer
+          </button>
+
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel"></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h5>Contrat_Client:</h5>
+                <input type="text" class="form-control" name="name" [(ngModel)]="data1" >
+
+
+
+
+                <button type="button"  class="btn" style="color: #000000 ;margin-left:180px ;"(click)="update() ">Modifier</button>
+              </div>
+              </div>
+                </div>
+              </div>
+
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

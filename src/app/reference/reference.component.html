@@ -1,0 +1,31 @@
+<section id="Reference" class="portfolio">
+  <div class="section-title">
+    <h2>reference</h2>
+    <h3>Consultez nos <span>projets</span></h3>
+    <p>bienvenue, Références PIP:</p>
+  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 mx-auto my-5" *ngFor="let item of dataArry2">
+      <mat-card class="example-card">
+        <mat-card-header>
+
+          <mat-card-title style="color: #f00404; margin-left:40px ;">Client<h6 class="bb" >{{item.name}}</h6></mat-card-title>
+          <mat-card-title style="color: #f00404;margin-left:40px ;">Contrat<h6 class="bb" >{{item.date}}</h6></mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="assets/img/clients/n11.png" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <mat-card-title style="color: #f00404;margin-left:50px ;">Description<h6 class="b" >{{item.namepiece}}</h6></mat-card-title>
+
+
+        </mat-card-content>
+        <mat-card-actions>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+
+</section><!-- End Portfolio Section -->
+

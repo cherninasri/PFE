@@ -1,0 +1,29 @@
+<br><br><br><br><br> <br> <br> <br>
+<form #b="ngForm" action="forms/contact.php" method="post" role="form" class="php-email-form">
+  <div class="form-row">
+    <div class="c">
+      <input type="text" name="name" class="form-control" id="name" placeholder="Nom" data-rule="minlen:4" data-msg="Please enter at least 4 chars" name="name" #name="ngModel" ngModel />
+      <div class="validate"></div>
+    </div>
+    <div class="c">
+      <input  type="email" class="form-control" name="email" id="email" placeholder=" Email" data-rule="email" data-msg="Please enter a valid email" name="email" #email="ngModel" ngModel  />
+      <div class="validate"></div>
+    </div>
+  </div>
+
+  <div class="n">
+    <input type="number" class="form-control" name="tel" id="subject" placeholder="Téléphone" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" name="tel" #tel="ngModel" ngModel />
+    <div class="validate"></div>
+  </div>
+  <div class="n">
+    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"  name="message" #message="ngModel" ngModel></textarea>
+    <div class="validate"></div>
+  </div>
+  <div class="mb-3">
+    <p class="alert alert-success" *ngIf="envoyer">{{envoyer}}</p>
+  </div>
+  <br><br>
+  <div class="text-center"><button type="submit" class="btn btn-primary" (click)="inscription1(b)">Envoyer</button></div>
+</form>
+<br><br><br><br><br><br><br>
+<app-footer></app-footer>

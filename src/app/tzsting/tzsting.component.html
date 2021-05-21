@@ -1,0 +1,50 @@
+<br><br><br><br><br> <br> <br> <br><br><br>
+
+<div >
+<div *ngFor=" let item of dataArry ">
+
+
+  <div *ngIf="item?.id === veri ">
+
+<!-- Carousel wrapper -->
+
+
+<!-- Carousel wrapper -->
+<div class="card" style="width: 430px;height: 500px;margin: auto;">
+  <div class="card-body">
+    <h5 style="margin-left:110px ;" >ID_Client</h5>
+    <h5 class="card-title" style="color: #106eea;margin-left: 50px;">{{item.id}}</h5>
+    <h5 style="margin-left:100px ;" >Nom_Client</h5>
+    <h6 class="card-text"   > {{item.name}} </h6>
+    <h5 style="margin-left:100px  ;" >Email_Client</h5>
+    <h6 class="card-text"  > {{item.email}} </h6>
+    <h5 style="margin-left:80px ;" >Description_Client</h5>
+    <p class="card-text" >{{item.namepiece}}</p>
+    <h5 style="margin-left:80px ;" >Téléphone_Client</h5>
+    <p class="card-text" >{{item.tel}}</p>
+    <h5 style="margin-left:100px ;" >Message_Client</h5>
+    <p class="card-text"  >{{item.message}}</p>
+    <div style=" margin-top:10px ;">
+    <div   *ngFor=" let i of item.image; let index = index;">
+      <a href="{{i}}" class="card-link"> {{index+1}}:Image </a>
+
+    </div>
+      </div>
+      <button class="btn btn-success" style="
+      position: absolute;
+      right: 192px;
+      bottom: 0;
+  "(click)="accept(item.id,item.name,item.namepiece)" >Accepte</button>
+   <button  class="btn btn-danger" style="
+   position: absolute;
+   bottom: 0;
+   right: 90px;
+" (click)="delete(item.id)">Supprimer </button></div>
+
+
+  </div>
+</div>
+
+
+</div>
+</div>

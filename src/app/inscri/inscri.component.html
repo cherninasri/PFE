@@ -1,0 +1,70 @@
+<br>
+<br><br><br><br>
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Se Connecter</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Créer un compte</label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+        <form   #n="ngForm" >
+				<div class="group">
+
+					<label for="user" class="label">adresse e-mail</label>
+					<input id="user" type="text" class="input" name="email" #email="ngModel" ngModel >
+				</div>
+				<div class="group">
+					<label for="pass" class="label">mot de passe</label>
+					<input id="pass" type="password" class="input" data-type="password" name="password" #password="ngModel" ngModel>
+        </div>
+      </form>
+				<div class="group">
+					<input id="check" type="checkbox" class="check" checked>
+
+        </div>
+        <p *ngIf="erreur" class="erreurlogin">{{erreur}}</p>
+				<div class="group">
+					<input type="submit" class="button" value="connexion" (click)="log(n)">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<a routerLink="./voiradmin" >Mot de passe oublié ?</a>
+				</div>
+      </div>
+
+
+      <!-- INscri  ---------------------------------------------------------------------------------------------- -->
+			<div class="sign-up-htm">
+        <form   #f="ngForm" >
+				<div class="group">
+					<label for="user" class="label">nom</label>
+					<input id="user" type="text" class="input" name="name" #name="ngModel" ngModel >
+        </div>
+        <div class="group">
+					<label for="pass" class="label">Addresse E-mail </label>
+					<input id="pass" type="text" class="input" name="email" #email="ngModel" ngModel>
+        </div>
+        <div class="group">
+					<label for="pass" class="label">téléphene</label>
+					<input id="pass" type="number" class="input" name="tel" #tel="ngModel" ngModel>
+        </div>
+				<div class="group">
+					<label for="pass" class="label">mote de passe</label>
+					<input id="pass" type="password" class="input" data-type="password" name="password" #password="ngModel" ngModel>
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Répéter mote de passe</label>
+					<input id="pass" type="password" class="input" data-type="password">
+				</div>
+
+        <p *ngIf="erreur1" class="erreurlogin">{{erreur1}}</p>
+      </form>
+				<div class="group">
+					<input type="submit" class="button" value="s'inscrire" (click)="inscription(f)">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<label for="tab-1"></label>
+				</div>
+			</div>
+		</div>
+	</div>

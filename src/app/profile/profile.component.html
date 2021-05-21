@@ -1,0 +1,71 @@
+<br><br><br><br><br>
+<div class="nasri">
+<h1 class="n" > . </h1>
+
+<h1 class="c"> _{{data1.name}}_ </h1>
+<h5 class="r"> Téléphone: {{data1.tel}} </h5>
+
+
+
+<!-- Button trigger modal -->
+<div class="bb">
+<button  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Modifier
+</button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5>Nom:</h5>
+      <input type="text" class="form-control" name="name" [(ngModel)]="data1.name" >
+      <h5>Téléphone:</h5>
+      <input type="number" class="form-control" name="name" [(ngModel)]="data1.tel" >
+
+
+      <button type="button" class="btn btn-primary" (click)="update() ">Modifier</button>
+
+
+      </div>
+      <div class="modal-footer">
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+</div>
+<img [src]="data1.image"  alt="" width="150px" height="150px">
+<div class="ad"><button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#exampleModal1">Modifier image</button></div>
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <input type="file" accept=".jpg,.png" (change)="up($event)" >
+
+      <button type="button" class="btn btn-primary" >Modifier</button>
+
+
+      </div>
+      <div class="modal-footer">
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,73 @@
+<div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+  <div class="container d-flex">
+    <div class="contact-info mr-auto">
+      <i class="icofont-envelope"></i>pip@pip.com.tn
+      <i class="icofont-phone"></i> +2 16 20 124 654
+    </div>
+    <div class="social-links">
+
+
+    </div>
+  </div>
+</div>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
+
+    <h1 class="logo mr-auto"><a href="index.html"><img src=" assets/img/clients/n1.png" alt="industris"><span></span></a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
+
+    <nav class="nav-menu d-none d-lg-block">
+      <ul>
+        <li ><a  href="index.html">Aceuil</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+            à propos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="domaine">Domaine D'intervention PIP</a></li>
+            <li><a class="dropdown-item" routerLink="savoir">Savoir Faire PIP</a></li>
+            <li><a class="dropdown-item" routerLink="rec">Moyens Materiels</a></li>
+          </ul>
+        <li><a href="#services"  >Services</a></li>
+        <li><a href="#Reference "  >nos projets</a></li>
+        <li><a href="#contact"  >Contact</a></li>
+
+
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="isUser" >
+            Commande
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="commanceman">maintenance</a></li>
+            <li><a class="dropdown-item" routerLink="commande">conception</a></li>
+          </ul>
+          <li><a routerLink="reclamation" *ngIf="isUser" >Reclamation</a></li>
+          <li><a routerLink="profile" *ngIf="isUser" >profile</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="admin && isUser" >
+              admin
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="lsitecoma">liste Conception</a></li>
+              <li><a class="dropdown-item" routerLink="lsitecomantenan">liste Maintenance</a></li>
+              <li><a class="dropdown-item" routerLink="lsitereclamation">liste Réclamantion</a></li>
+              <li><a class="dropdown-item" routerLink="lsitecontact">liste Contact</a></li>
+              <li><a class="dropdown-item" routerLink="nosprojet">liste Référence</a></li>
+            </ul>
+        <li><button type="button" class="btn btn-outline-dark" *ngIf="!isUser" ><a routerLink="inscri" *ngIf="!isUser" >Connexion</a></button>
+        <li><button type="button" class="btn btn-outline-dark"*ngIf="isUser" ><a routerLink="inscri" *ngIf="isUser"  (click)="Logout()">Déconnexion</a></button>
+
+      </li>
+
+
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </div>
+</header><!-- End Header -->
